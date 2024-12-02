@@ -8,6 +8,17 @@ Fetch repository with `--recursive` option (so that needed submodules are includ
 git clone --recursive https://github.com/anssihalmeaho/booklibrary.git
 ```
 
+## Demonstrating information based programming
+Idea is to show how information stored as **facts** makes information handling
+simple and flexible. Also consistency is taken care of by using transactions.
+
+As information is stored as facts then logic programming type of queries
+can be used for it (utilising [loqic](https://github.com/anssihalmeaho/loqic)).
+
+[ValueZ value store](https://github.com/anssihalmeaho/fuvaluez) is used as permanent storage
+for information.
+In example **valuez** is used in in-memory mode only (data not stored to file).
+
 ## Build funla to include valuez
 In order to include **valuez** data store to **funla** interpreter follow
 instructions in [ValueZ installed as std-module](https://github.com/anssihalmeaho/fuvaluez).
