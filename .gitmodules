@@ -1,0 +1,3 @@
+[submodule "imported/loqic"]
+	path = imported/loqic
+	url = https://github.com/anssihalmeaho/loqic.git
