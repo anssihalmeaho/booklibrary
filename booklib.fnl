@@ -58,14 +58,11 @@ new = proc()
 		result = call(stdvar.new list(true ''))
 
 		add-if-not-found = proc(txn)
+			call(valuez.put-value txn user-item)
 			facts = call(valuez.items txn)
 			user-results = call(loqic.match list('user' user-firstname user-lastname '?user-id') facts)
-			if(empty(user-results)
-				call(proc()
-					call(valuez.put-value txn user-item)
-					true
-				end)
-
+			if(eq(len(user-results) 1)
+				true
 				call(proc()
 					call(stdvar.set result list(false 'user exists already'))
 					false
